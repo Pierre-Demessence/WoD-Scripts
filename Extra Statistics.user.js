@@ -40,7 +40,6 @@
 // @description		Generate additional statistical data in the dungeon and duel report pages
 // @include		http*://*.world-of-dungeons.*/wod/spiel/*dungeon/report.php*
 // @include		http*://*.world-of-dungeons.*/wod/spiel/tournament/*duell.php*
-// @require        http://userscripts.org/scripts/source/113727.user.js?maxage=30&minage=1&method=show
 // ==/UserScript==
 
 

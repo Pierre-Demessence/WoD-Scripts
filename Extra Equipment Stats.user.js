@@ -84,7 +84,6 @@
 // @author			Tomy
 // @contributor     Finargol, taitoune, Mastermage, Dragor Laciturne
 // @copyright		2010+, Tomy
-// @require			http://usocheckup.redirectme.net/92775.js?maxage=1
 // ==/UserScript==
 
 var DEBUG = true;

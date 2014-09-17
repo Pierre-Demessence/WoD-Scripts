@@ -5,7 +5,6 @@
 // @include        *.world-of-dungeons.fr/wod/spiel//dungeon/report.php*
 // @version        1.1.3
 // @author         Atchoum
-// @require        http://userscripts.org/scripts/source/102357.user.js?maxage=7&method=show
 // ==/UserScript==
 
 var updateButton;
