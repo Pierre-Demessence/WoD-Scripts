@@ -1,3 +1,4 @@
+var DSC		= -1;
 var NONE	= 0;
 var MSG		= 1;
 var GRP		= 2;
@@ -8,6 +9,8 @@ var STATE = NONE;
 function setBadge() {
 	var text = "";
 	switch (STATE) {
+		case DSC:
+			text = "???"; break;
 		case MSG:
 			text = "MSG"; break;
 		case GRP:
@@ -26,7 +29,9 @@ function check() {
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState == 4) {
 			var html = xhr.responseText;
-			if (html.search("/wod/css//skins/skin-8/images/icons/mail_new") != -1)
+			if (html.search("Connexion") != -1)
+				STATE = DSC;
+			else if (html.search("/wod/css//skins/skin-8/images/icons/mail_new") != -1)
 				STATE = MSG;
 			else if (html.search("/wod/css//skins/skin-8/images/icons/forum_group_new") != -1)
 				STATE = GRP;
