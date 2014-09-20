@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "WoD Checker",
+  "description": "Check WoD for messages in inbox or forum.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "WOD.png"
+  },
+  
+  "background": {
+    "scripts": ["jquery-2.1.1.min.js", "background.js"]
+  },
+  
+  "permissions": [
+    "http://ezantoh.world-of-dungeons.fr/",
+	"tabs",
+	"alarms"
+  ]
+}
