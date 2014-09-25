@@ -35,9 +35,7 @@ function notify() {
 	}
 		
 	chrome.browserAction.setBadgeText({text:text});
-	chrome.notifications.onClicked.addListener(function (notificationId) {
-		chrome.tabs.create({'url': URL}, function(tab) {});
-	});
+	
 	if (STATE != STATE_OLD)
 	{
 		chrome.notifications.create("42", {type:"list", iconUrl:"WOD.png", title:"Notifications", message:"", items:list}, function(notificationId) {});
@@ -109,5 +107,9 @@ chrome.alarms.onAlarm.addListener(function(alarm){
 });
 
 chrome.browserAction.onClicked.addListener(function(tab) {
+	chrome.tabs.create({'url': URL}, function(tab) {});
+});
+
+chrome.notifications.onClicked.addListener(function (notificationId) {
 	chrome.tabs.create({'url': URL}, function(tab) {});
 });
