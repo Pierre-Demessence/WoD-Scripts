@@ -16,6 +16,7 @@
   "permissions": [
     "http://ezantoh.world-of-dungeons.fr/",
 	"tabs",
-	"alarms"
+	"alarms",
+	"notifications"
   ]
 }
