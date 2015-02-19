@@ -438,7 +438,7 @@ if (isset($_POST['talents']) and !empty($_POST['talents'])) {
   $pos = strpos($raw,'Coûts');
   $pos1 = strpos($raw,'Lignes par page',$pos);
   if (!$pos1) $pos1 = strlen($raw);
-  preg_match_all('/\r\n[0-9]+[ \t]*([^\n\r\t0-9]*)[\t \r\n]*([0-9]*|-)([\t \r\n]*\[([0-9]*)\])?/',substr($raw,$pos,$pos1),$match);
+  preg_match_all('/\r\n[0-9]+[ \t]*([^\n\r\t0-9]*)[\t \r\n]*[^0-9-n]*([0-9]*|-)([\t \r\n]*\[([0-9]*)\])?/',substr($raw,$pos,$pos1),$match);
 
   foreach ($match[1] as $n=>$val) {
     if (strpos($val,'partir du niveau')) break;
